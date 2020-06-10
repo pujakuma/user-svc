@@ -28,8 +28,18 @@ public class User {
 	  @NotBlank
 	  @Size(max = 120)
 	  private String password;
+	  
+	  private boolean isEnabled;
 
-	  @DBRef
+	  public boolean isEnabled() {
+		return isEnabled;
+	}
+
+	public void setEnabled(boolean isEnabled) {
+		this.isEnabled = isEnabled;
+	}
+
+	@DBRef
 	  private Set<Role> roles = new HashSet<>();
 
 	  public User() {

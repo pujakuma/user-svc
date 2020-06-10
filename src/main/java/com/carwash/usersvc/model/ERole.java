@@ -2,7 +2,7 @@ package  com.carwash.usersvc.model;
 
 public enum ERole {
 	  ROLE_USER,
-	  ROLE_MODERATOR,
+	  ROLE_WASHER,
 	  ROLE_ADMIN
 
 }
