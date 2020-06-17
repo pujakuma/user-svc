@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.carwash.usersvc.model.User;
+import com.carwash.usersvc.payload.request.ForgetPasswordRequest;
 
 public interface UserRepository extends MongoRepository<User, String> {
   Optional<User> findByUsername(String username);
@@ -14,6 +15,8 @@ public interface UserRepository extends MongoRepository<User, String> {
   Boolean existsByEmail(String email);
 
 User findByEmailIgnoreCase(String email);
+
+ForgetPasswordRequest findByEmailIgnoreCase(ForgetPasswordRequest email);
 
  
   

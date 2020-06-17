@@ -24,7 +24,7 @@ public class AccessTestController {
 	@GetMapping("/washer")
 	@PreAuthorize("hasRole('WASHER')")
 	public String washerAccess() {
-		return "WASHER Board.";
+		return "WASHER Content.";
 	}
 
 	@GetMapping("/admin")
